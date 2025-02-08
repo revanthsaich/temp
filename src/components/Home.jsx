@@ -1,62 +1,26 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import SpotlightCard from './SpotLightCard'
+import React from 'react';
+import { motion } from 'framer-motion';
+import SpotlightCard from './SpotlightCard';
+import Hero from './Hero';
+import Models from'./Models';
+import Reviews from './Reviews';
 export default function Home() {
   return (
     <div>
-      <main className="flex flex-col items-center">
-        {/* First Section */}
+      {/* Hero Section */}
+      <Hero />
+      <Models/>
+      <Reviews/>
+      {/* Main Content */}
+      {/* <main className="flex flex-col items-center mt-16">
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full h-screen max-w-6xl flex items-center justify-center px-8"
+          className="w-full max-w-7xl px-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-            {/* Left Half: Logo */}
-            <div className="flex justify-center">
-              <img
-                src="/logo.svg"
-                alt="MedApp Logo"
-                className="w-48 h-48 object-contain"
-              />
-            </div>
-
-            {/* Right Half: Text */}
-            <div className="flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-4">Welcome to MedApp</h2>
-              <p className="text-gray-600">
-                MedApp is a dynamic platform designed to provide medical assistance,
-                including diagnostics, diet plans, and fitness tracking, all from the
-                comfort of your home.
-              </p>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Second Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="w-full h-screen max-w-6xl flex flex-col items-center justify-center px-8 bg-black text-white"
-        >
-          {/* Top Part: Project Details */}
-          <div className="w-full text-center mb-12">
-            <h3 className="text-4xl font-bold mb-6">About the Project</h3>
-            <p className="text-lg text-gray-300">
-              This web application aims to revolutionize healthcare by providing
-              accessible and personalized solutions for users. Whether you're looking
-              for health diagnostics, fitness tracking, or nutritional guidance,
-              MedApp has got you covered.
-            </p>
-          </div>
-
-          {/* Bottom Part: Spotlight Cards */}
           <div className="flex flex-col md:flex-row gap-8 w-full justify-center">
-            {/* Spotlight Card for Diagnose */}
             <SpotlightCard
               className="custom-spotlight-card flex-1 p-8 h-96 flex flex-col justify-center"
               spotlightColor="rgba(0, 229, 255, 0.2)"
@@ -72,7 +36,6 @@ export default function Home() {
               </div>
             </SpotlightCard>
 
-            {/* Spotlight Card for Diet/Gym */}
             <SpotlightCard
               className="custom-spotlight-card flex-1 p-8 h-96 flex flex-col justify-center"
               spotlightColor="rgba(0, 229, 255, 0.2)"
@@ -94,7 +57,7 @@ export default function Home() {
             </SpotlightCard>
           </div>
         </motion.section>
-      </main>
+      </main> */}
     </div>
-  )
+  );
 }
